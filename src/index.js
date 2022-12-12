@@ -1,4 +1,5 @@
 import './style.css';
+
 const listItems = document.querySelector('.task-list');
 const addTask = document.querySelector('#new-task');
 const addBtn = document.getElementById('plus');
@@ -110,7 +111,6 @@ listItems.addEventListener('click', (e) => {
 });
 
 // Highlight Completed task
-
 listItems.addEventListener('change', (e) => {
   const { target } = e;
   const parentElement = target.parentNode;
