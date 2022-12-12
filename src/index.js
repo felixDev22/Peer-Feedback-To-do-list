@@ -1,8 +1,10 @@
-export const listItems = document.querySelector('.task-list');
-export const addTask = document.querySelector('#new-task');
-export const addBtn = document.getElementById('plus');
+import './style.css';
 
-export let taskArr = [];
+const listItems = document.querySelector('.task-list');
+const addTask = document.querySelector('#new-task');
+const addBtn = document.getElementById('plus');
+
+let taskArr = [];
 
 const addNewList = () => {
   const task = {};
@@ -54,6 +56,14 @@ const removeList = (index) => {
   addNewList();
   generateList();
   pushToLocal();
+};
+
+// Checkbox
+const boxChecked = (box) => {
+  if (box.checked) {
+    return true;
+  }
+  return false;
 };
 
 // Completed task list
@@ -121,16 +131,7 @@ listItems.addEventListener('change', (e) => {
   }
 });
 
-//complete
-const boxChecked = (box) => {
-  if (box.checked) {
-    return true;
-  }
-  return false;
-};
-export default boxChecked;
-
-//remove all completed
+// remove all completed
 const removeAllCompleted = () => {
   const newTasks = taskArr.filter((taskArr) => !taskArr.completed);
   for (let i = 0; i < newTasks.length; i += 1) {
