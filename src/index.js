@@ -14,13 +14,11 @@ const addNewList = () => {
 };
 
 // Save To Local Directory
-
 const pushToLocal = () => {
   localStorage.setItem('taskArr', JSON.stringify(taskArr));
 };
 
 // To render the task list
-
 const generateList = () => {
   taskArr.forEach((task) => {
     listItems.innerHTML += `
@@ -49,7 +47,6 @@ const showList = () => {
 };
 
 // Delete Button to remove task
-
 const removeList = (index) => {
   taskArr.splice(index, 1);
   addNewList();
@@ -66,7 +63,6 @@ const boxChecked = (box) => {
 };
 
 // Completed task list
-
 const checkCompleted = (buttonId, box) => {
   box.nextElementSibling.classList.toggle('mark-completed');
   taskArr[buttonId].completed = boxChecked(box);
@@ -78,7 +74,6 @@ const checkCompleted = (buttonId, box) => {
 };
 
 // on Load
-
 window.addEventListener('load', () => {
   showList();
 });
