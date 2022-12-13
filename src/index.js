@@ -14,7 +14,6 @@ import removeAllCompleted from './modules/clearCompleted.js';
 import boxChecked from './modules/completed.js';
 
 // on Load
-
 window.addEventListener('load', () => {
   showList();
 });
@@ -28,7 +27,6 @@ addTask.addEventListener('keypress', (e) => {
 });
 
 // Add Button to add new task
-
 addBtn.addEventListener('click', () => {
   addNewList();
   generateList();
@@ -51,7 +49,6 @@ listItems.addEventListener('click', (e) => {
 });
 
 // Highlight Completed task
-
 listItems.addEventListener('change', (e) => {
   const { target } = e;
   const parentElement = target.parentNode;
